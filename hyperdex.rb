@@ -30,7 +30,7 @@ class Hyperdex < Formula
     system "curl -O https://raw.github.com/rescrv/HyperDex/master/osx/ieee754.h --output osx/ieee754.h"
     system "curl -O https://raw.github.com/rescrv/HyperDex/3cb4e2a038d963ca7352ce3498e046ee32604754/client/ruby/type_conversion.h"
     system "mv type_conversion.h client/ruby/type_conversion.h"
-    system "./configure", "--enable-python-bindings", "--enable-ruby-bindings", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
+    system "./configure", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
             "PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "E_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -le\"",
             "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "BUSYBEE_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lbusybee\"",
             "BUSYBEE_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "REPLICANT_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lreplicant\"",
